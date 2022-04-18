@@ -17,6 +17,8 @@ RUN set -x && \
 
 FROM scratch
 
+LABEL org.opencontainers.image.description "Synology toolkit to build kernel modules"
+
 COPY --from=builder /toolkit /
 
 ADD rootfs /
@@ -41,4 +43,4 @@ ENV CROSS_COMPILE="/usr/local/x86_64-pc-linux-gnu/bin/x86_64-pc-linux-gnu-"
 
 RUN sed -i "s#PATH='#PATH='/usr/local/x86_64-pc-linux-gnu/bin:#" /root/.bashrc
 
-ENTRYPOINT ["/usr/bin/bash"]
+ENTRYPOINT ["/usr/bin/do.sh"]
