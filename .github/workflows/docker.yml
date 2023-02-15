@@ -26,9 +26,11 @@ jobs:
       with:
         submodules: recursive
 
-    - name: PrepareReg Names
+    - name: Prepare GitHub Container Registry Repository Name
       run: |
-        echo IMAGE_REPOSITORY=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
+        IMAGE_REPOSITORY=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')
+        echo IMAGE_REPOSITORY=$IMAGE_REPOSITORY >> $GITHUB_ENV
+        echo image repository: $IMAGE_REPOSITORY
 
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v2
@@ -63,5 +65,5 @@ jobs:
           VERSION=${{ matrix.version }}
         tags: |
           ${{ secrets.DOCKER_USERNAME }}/syno-toolkit:${{ matrix.platforms }}-${{ matrix.version }}
-          ghcr.io/${{ env.IMAGE_REPOSITORY }}:${{ matrix.platforms }}-${{ matrix.version }}
+          ghcr.io/${{ env.IMAGE_REPOSITORY }}/syno-toolkit:${{ matrix.platforms }}-${{ matrix.version }}
         push: true
