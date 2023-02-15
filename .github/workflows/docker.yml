@@ -63,5 +63,5 @@ jobs:
           VERSION=${{ matrix.version }}
         tags: |
           ${{ secrets.DOCKER_USERNAME }}/syno-toolkit:${{ matrix.platforms }}-${{ matrix.version }}
-          ghcr.io/${{ env.IMAGE_REPOSITORY }}/syno-toolkit:${{ matrix.platforms }}-${{ matrix.version }}
+          ghcr.io/${{ env.IMAGE_REPOSITORY }}:${{ matrix.platforms }}-${{ matrix.version }}
         push: true
