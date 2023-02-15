@@ -11,8 +11,6 @@ jobs:
   build_image:
     name: Build and Push Image
     runs-on: ubuntu-latest
-    permissions:
-      packages: write
     strategy:
       matrix:
         module:
