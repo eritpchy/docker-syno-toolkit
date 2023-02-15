@@ -15,4 +15,3 @@ ADD ${CDN}/download/ToolChain/toolkit/${VERSION}/${PLATFORM}/ds.${PLATFORM}-${VE
 ADD rootfs /
 
 ENTRYPOINT ["/usr/bin/bash"]
-
