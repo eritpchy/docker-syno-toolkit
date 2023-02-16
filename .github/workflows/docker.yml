@@ -18,7 +18,7 @@ jobs:
         include:
         - module: epyc7002-7.1
           platforms: epyc7002
-          version: 7.1
+          toolkit_ver: 7.1
     timeout-minutes: 60
     steps:
     - name: Check out code
@@ -62,8 +62,8 @@ jobs:
           org.opencontainers.image.revision=${{ github.sha }}
         build-args: |-
           PLATFORM=${{ matrix.platforms }}
-          VERSION=${{ matrix.version }}
+          TOOLKIT_VER=${{ matrix.toolkit_ver }}
         tags: |
-          ${{ secrets.DOCKER_USERNAME }}/syno-toolkit:${{ matrix.platforms }}-${{ matrix.version }}
-          ghcr.io/${{ github.repository }}:${{ matrix.platforms }}-${{ matrix.version }}
+          ${{ secrets.DOCKER_USERNAME }}/syno-toolkit:${{ matrix.platforms }}-${{ matrix.toolkit_ver }}
+          ghcr.io/${{ github.repository }}:${{ matrix.platforms }}-${{ matrix.toolkit_ver }}
         push: true
