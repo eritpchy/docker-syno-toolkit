@@ -32,7 +32,7 @@ ENV CC="x86_64-pc-linux-gnu-gcc"
 ENV CXX="x86_64-pc-linux-gnu-g++"
 ENV LD="x86_64-pc-linux-gnu-ld"
 ENV CXX="x86_64-pc-linux-gnu-g++"
-ENV OBJCOPY="x86_64-linux-gnu-objcopy"
+# ENV OBJCOPY="x86_64-linux-gnu-objcopy"
 
 ENV PATH=/usr/local/x86_64-pc-linux-gnu/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl/:/usr/syno/bin
 ENV KSRC="/usr/local/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/sys-root/usr/lib/modules/DSM-${TOOLKIT_VER}/build"
