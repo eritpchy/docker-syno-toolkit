@@ -17,11 +17,15 @@ jobs:
       matrix:
         module:
         - "epyc7002-7.1"
+        - "epyc7002-7.2"
         - "geminilake-7.1"
         include:
         - module: epyc7002-7.1
           platforms: epyc7002
           toolkit_ver: 7.1
+        - module: epyc7002-7.2
+          platforms: epyc7002
+          toolkit_ver: 7.2
         - module: geminilake-7.1
           platforms: geminilake
           toolkit_ver: 7.1
