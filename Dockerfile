@@ -9,10 +9,13 @@ ARG CDN=https://global.synologydownload.com
 
 RUN set -x && \
     wget ${CDN}/download/ToolChain/toolkit/${TOOLKIT_VER}/base/base_env-${TOOLKIT_VER}.txz && \
+    md5sum base_env-${TOOLKIT_VER}.txz >> /toolkit/md5sum.txt && \
     tar -Jxvf base_env-${TOOLKIT_VER}.txz -C /toolkit && \
     wget ${CDN}/download/ToolChain/toolkit/${TOOLKIT_VER}/${PLATFORM}/ds.${PLATFORM}-${TOOLKIT_VER}.env.txz && \
+    md5sum ds.${PLATFORM}-${TOOLKIT_VER}.env.txz >> /toolkit/md5sum.txt && \
     tar -Jxvf ds.${PLATFORM}-${TOOLKIT_VER}.env.txz -C /toolkit && \
     wget ${CDN}/download/ToolChain/toolkit/${TOOLKIT_VER}/${PLATFORM}/ds.${PLATFORM}-${TOOLKIT_VER}.dev.txz && \
+    md5sum ds.${PLATFORM}-${TOOLKIT_VER}.dev.txz >> /toolkit/md5sum.txt && \
     tar -Jxvf ds.${PLATFORM}-${TOOLKIT_VER}.dev.txz -C /toolkit
 
 FROM scratch
