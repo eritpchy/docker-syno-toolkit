@@ -19,6 +19,7 @@ jobs:
         - "epyc7002-7.1"
         - "epyc7002-7.2"
         - "geminilake-7.1"
+        - "geminilake-7.2"
         include:
         - module: epyc7002-7.1
           platforms: epyc7002
@@ -29,6 +30,9 @@ jobs:
         - module: geminilake-7.1
           platforms: geminilake
           toolkit_ver: 7.1
+        - module: geminilake-7.2
+          platforms: geminilake
+          toolkit_ver: 7.2
     timeout-minutes: 120
     steps:
     - name: Check out code
