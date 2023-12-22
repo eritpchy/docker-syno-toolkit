@@ -78,6 +78,6 @@ jobs:
           PLATFORM=${{ matrix.platforms }}
           TOOLKIT_VER=${{ matrix.toolkit_ver }}
         tags: |
-          ${{ secrets.DOCKER_USERNAME }}/syno-toolkit:${{ matrix.platforms }}-${{ matrix.toolkit_ver }}
-          ghcr.io/${{ github.repository }}:${{ matrix.platforms }}-${{ matrix.toolkit_ver }}
+          ${{ secrets.DOCKER_USERNAME }}/syno-toolkit:${{ matrix.platforms }}-${{ matrix.toolkit_ver }}-v2
+          ghcr.io/${{ github.repository }}:${{ matrix.platforms }}-${{ matrix.toolkit_ver }}-v2
         push: true

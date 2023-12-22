@@ -69,10 +69,10 @@ if [ $# -lt 1 ]; then
   exit 1
 fi
 
-export PATH="${PATH}:/usr/local/x86_64-pc-linux-gnu/bin"
-export KSRC="/usr/local/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/sys-root/usr/lib/modules/DSM-${TOOLKIT_VER}/build"
-export LINUX_SRC="/usr/local/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/sys-root/usr/lib/modules/DSM-${TOOLKIT_VER}/build"
-export CROSS_COMPILE="/usr/local/x86_64-pc-linux-gnu/bin/x86_64-pc-linux-gnu-"
+export PATH="${PATH}:/toolkit/usr/local/x86_64-pc-linux-gnu/bin"
+export KSRC="/toolkit/usr/local/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/sys-root/usr/lib/modules/DSM-${TOOLKIT_VER}/build"
+export LINUX_SRC="/toolkit/usr/local/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/sys-root/usr/lib/modules/DSM-${TOOLKIT_VER}/build"
+export CROSS_COMPILE="/toolkit/usr/local/x86_64-pc-linux-gnu/bin/x86_64-pc-linux-gnu-"
 
 #export CFLAGS="-I/opt/${1}/include"
 #export LDFLAGS="-I/opt/${1}/lib"
